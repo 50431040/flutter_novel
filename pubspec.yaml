@@ -1,8 +1,8 @@
 name: flutter_novel
-description: Flutter novel plugin.
+description: Flutter novel plugin. 穿山甲小说 Flutter SDK
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/50431040/flutter_novel
+repository: https://github.com/50431040/flutter_novel
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
