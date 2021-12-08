@@ -1,0 +1,48 @@
+group 'net.niuxiaoer.flutter_novel'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven{
+            url 'https://artifact.bytedance.com/repository/pangle/'
+        }
+        maven{
+            url 'https://artifact.bytedance.com/repository/Volcengine/'
+        }
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+}
+
+dependencies {
+    //小说
+    implementation ('com.pangle.cn:pangrowth-sdk:1.6.0.0'){
+        exclude group: 'com.pangle.cn', module: 'pangrowth-dpsdk'
+        exclude group: 'com.pangle.cn', module: 'pangrowth-dpsdk-live'
+        exclude group: 'com.pangle.cn', module: 'pangrowth-game-sdk'
+        exclude group: 'com.pangle.cn', module: 'pangrowth-luckycat-sdk'
+    }
+    implementation 'com.bytedance.applog:RangersAppLog-Lite-cn:6.2.2'
+
+}
