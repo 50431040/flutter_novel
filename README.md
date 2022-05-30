@@ -1,4 +1,4 @@
-# flutter_novel
+# flutter_novel（不再维护）
 
 穿山甲小说 Flutter SDK
 
